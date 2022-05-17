@@ -1,0 +1,215 @@
+
+*{
+    box-sizing: border-box;
+}
+.navigation{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 120px;
+    height: 60px;
+    background: #fff;
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    transition: height .5s, width .5s;
+    transition-delay: 0s, 0.75s;
+    overflow: hidden;
+}
+.navigation.active{
+    width: 300px;
+    height: 250px;
+    transition: width .5s, height .5s;
+    transition-delay: 0s, 0.75s;
+}
+.navigation .userBx{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    transition: .5s;
+    transition-delay: .5s;
+}
+.navigation.active .userBx{
+    width: calc(100% - 60px);
+    transition-delay: 0s;
+}
+.navigation .userBx .username{
+    white-space: nowrap;
+    color: #555;
+    font-size: 1.1em;
+}
+.navigation .userBx .imgBx{
+    position: relative;
+    min-width: 60px;
+    height: 60px;
+    overflow: hidden;
+    background: #000;
+    border-radius: 50%;
+    border: 10px solid #fff;
+}
+.navigation .userBx .imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.navigation .menuToggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation .menuToggle::before{
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background: #555;
+    transform: translateY(-10px);
+    box-shadow: 0 10px #555;
+    transition: 0.5s;
+}
+.navigation .menuToggle::after{
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 2px;
+    background: #555;
+    transform: translateY(10px);
+    transition: 0.5s;
+}
+.navigation.active .menuToggle::before{
+    transform: translateY(0px) rotate(45deg);
+    box-shadow: 0 0 #555;
+
+}
+.navigation.active .menuToggle::after{
+    transform: translateY(0px) rotate(-45deg);
+}
+.menu{
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 60px);
+    margin-top: 60px;
+    padding: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.menu li{
+    list-style: none;
+}
+.menu li a{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 1em;
+    gap: 10px;
+    text-decoration: none;
+    color: #555;
+}
+.menu li a:hover{
+    color: #4e65ff;
+}
+.menu li a ion-icon{
+    font-size: 1.5rem;
+
+}
+.div1{
+    width: 100%;
+    position: relative;
+}
+.user{
+    
+    color: rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    position: absolute;
+    margin: 4px 0px 0px 15px;
+    padding: 5px 0;
+}
+input{
+    width: 90%;
+    height: 45px;
+    outline: none;
+    padding-left: 40px;
+}
+textarea{
+    width: 90%;
+    outline: none;
+    padding-left: 40px;
+    padding-top: 10px;;
+}
+button{
+    width: 180px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    font-size: 1em;
+    gap: 10px;
+    color: #555;
+    overflow: hidden;
+}
+.icon{
+    margin-left: 44px;
+    left: 210px;
+    font-size: 1.5rem;
+}
+.icon.active{
+    position: absolute;
+    margin-left: 110px;
+    opacity: 0;
+    transition: opacity, ease-in-out .5s;   
+}
+span.active{
+   position: absolute;
+   margin-left: 50px;
+   opacity: 0;
+}
+.ion{
+    position: absolute;
+    opacity: 0;
+}
+.ion.active{
+    opacity: 1;
+    color: white;
+    font-weight: bolder;
+    margin-left: 70px;
+    font-size: 2.5em;
+    transition: opacity, ease-out 2s;  
+} 
+button.active{
+    transition: ease-in-out .5s;
+    background: #2196f3;
+    border-color: transparent;
+}
+i{
+    color: #000;
+}
+.body1.active{
+    background: rgba(0, 0, 0, 0.4);
+}
+.body1.active form input{
+    background: transparent;
+    border-color: transparent;
+    filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+.body1.active form textarea, button{
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+}
+.body1.active form .user{
+  color: transparent;
+}

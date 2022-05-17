@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Default"
+      href="/css/app-e23924a0edb4b571d42fe2a3ca61ab8b.css?vsn=d"
+    >
+    <link
+      rel="stylesheet"
+      data-purpose="Layout StyleSheet"
+      title="Web Awesome"
+
+      href="/css/app-wa-6972bf07d6b9f99336a9a78bb51ecbc8.css?vsn=d"
+    >
+    <link
+      rel="stylesheet"
+
+      href="https://site-assets.fontawesome.com/releases/v6.1.1/css/all.css"
+    >
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="navigation">
+        <div class="userBx">
+            <div class="imgBx">
+                <img src="profile.jpg" alt="">
+            </div>
+            <p class="username">@Realrexmon</p>
+        </div>
+        <div class="menuToggle"></div>
+        <ul class="menu">
+            <li><a href="index.html"><ion-icon name="home-outline"></ion-icon>Home</a></li>
+            <li><a href="ab.html"><ion-icon name="help-circle-outline"></ion-icon>About Us</a></li>
+            <li><a href="contact.html"><ion-icon name="chatbubble-ellipses-outline"></ion-icon>Contact Us</a></li>
+        </ul>
+    </div>
+    <div class="body1">
+    <center>
+        <form action="">
+        <h2>SEND US A MESSAGE</h2>
+        
+        &#9135;&#9135;&#9135; ✪ &#9135;&#9135;&#9135;<br><br><br><br>
+        <div class="div1"><ion-icon class="user" name="person"></ion-icon>
+            <input type="text" name="Name" placeholder=" Your Name"></div><br>
+        <div class="div1"><ion-icon class="user" name="call"></ion-icon>
+            <input type="number" name="Phone Number" placeholder="Phone Number"></div><br>
+        <div class="div1"><i class="fa-regular fa-pen-to-square user"></i>
+            <input type="text" name="Subject" placeholder="Subject"></div><br>
+        <div class="div1"><i class="fa-regular fa-pencil user"></i>
+            <textarea name="Comment" cols="58" rows="10" placeholder="Comment"></textarea></div><br>
+        </form>
+            <button><ion-icon class="ion" name="checkmark"></ion-icon><ion-icon class="icon" name="send"></ion-icon><span>SEND</span></button>
+    
+    </center></div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+let button = document.querySelector('button');
+let icon = document.querySelector('.icon');
+let p = document.querySelector('span');
+let t = document.querySelector('.ion');
+button.onclick = function(){
+    button.classList.toggle('active')
+    t.classList.toggle('active')
+    icon.classList.toggle('active')
+    p.classList.toggle('active')
+}
+</script>
+<script>
+    let menuToggle = document.querySelector('.menuToggle');
+let navigation = document.querySelector('.navigation');
+let body1 = document.querySelector('.body1');
+menuToggle.onclick = function(){
+    navigation.classList.toggle('active')
+    body1.classList.toggle('active')
+}
+</script>
+</body>
+</html>
