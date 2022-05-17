@@ -203,7 +203,7 @@ i{
     filter: blur(8px);
   -webkit-filter: blur(8px);
 }
-.body1.active form textarea, button{
+.body1.active form textarea{
     background: transparent;
     border-color: transparent;
     color: transparent;
@@ -212,4 +212,12 @@ i{
 }
 .body1.active form .user{
   color: transparent;
+}
+
+.body1.active button{
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
 }
