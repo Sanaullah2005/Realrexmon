@@ -5,8 +5,8 @@
 .navigation{
     position: fixed;
     top: 20px;
-    right: 20px;
-    width: 120px;
+    right: 10px;
+    width: 60px;
     height: 60px;
     background: #fff;
     box-shadow: 0 25px 35px rgba(0, 0, 0, 0.1);
@@ -23,6 +23,12 @@
     transition-delay: 0s, 0.75s;
 }
 .navigation .userBx{
+    opacity: 0;
+    position: absolute;
+}
+.navigation.active .userBx{
+    width: calc(100% - 60px);
+    transition-delay: 0s;
     position: relative;
     width: 60px;
     height: 60px;
@@ -32,10 +38,7 @@
     overflow: hidden;
     transition: .5s;
     transition-delay: .5s;
-}
-.navigation.active .userBx{
-    width: calc(100% - 60px);
-    transition-delay: 0s;
+    opacity: 1;
 }
 .navigation .userBx .username{
     white-space: nowrap;
@@ -213,7 +216,6 @@ i{
 .body1.active form .user{
   color: transparent;
 }
-
 .body1.active button{
   background: transparent;
   border-color: transparent;
